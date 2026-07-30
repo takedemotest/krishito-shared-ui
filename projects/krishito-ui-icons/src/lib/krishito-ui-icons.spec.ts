@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SharedUi } from './shared-ui';
+import { KrishitoUiIcons } from './krishito-ui-icons';
 
-describe('SharedUi', () => {
-  let component: SharedUi;
-  let fixture: ComponentFixture<SharedUi>;
+describe('KrishitoUiIcons', () => {
+  let component: KrishitoUiIcons;
+  let fixture: ComponentFixture<KrishitoUiIcons>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SharedUi],
+      imports: [KrishitoUiIcons],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(SharedUi);
+    fixture = TestBed.createComponent(KrishitoUiIcons);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

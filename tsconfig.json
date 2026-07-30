@@ -12,6 +12,7 @@
     "experimentalDecorators": true,
     "importHelpers": true,
     "paths": {
+      "krishito-ui-icons": ["./dist/krishito-ui-icons"],
       "shared-ui": ["./dist/shared-ui"]
     },
     "target": "ES2022",
@@ -29,6 +30,12 @@
     },
     {
       "path": "./projects/shared-ui/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/krishito-ui-icons/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/krishito-ui-icons/tsconfig.spec.json"
     }
   ]
 }
