@@ -1,12 +1,12 @@
 {
   "name": "@takedemotest/krishito-ui-icons",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Krishito Angular Icon Library",
   "license": "MIT",
   "peerDependencies": {
     "@angular/common": "^22.0.0",
     "@angular/core": "^22.0.0",
-    "@angular/material": "^22.0.0"
+    "@angular/material": "^21.2.14"
   },
   "dependencies": {
     "tslib": "^2.3.0"
