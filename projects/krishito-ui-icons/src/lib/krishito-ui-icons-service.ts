@@ -18,7 +18,7 @@ export class IconService {
     iconNames.forEach(icon => {
       this.iconRegistry.addSvgIcon(
         icon,
-        this.sanitizer.bypassSecurityTrustResourceUrl(`assets/svg-icons/${icon}.svg`)
+        this.sanitizer.bypassSecurityTrustResourceUrl(`svg-icons/${icon}.svg`)
       );
     });
   }

@@ -11,7 +11,7 @@ class IconService {
     }
     registerIcons(iconNames) {
         iconNames.forEach(icon => {
-            this.iconRegistry.addSvgIcon(icon, this.sanitizer.bypassSecurityTrustResourceUrl(`assets/svg-icons/${icon}.svg`));
+            this.iconRegistry.addSvgIcon(icon, this.sanitizer.bypassSecurityTrustResourceUrl(`svg-icons/${icon}.svg`));
         });
     }
     static ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "22.0.8", ngImport: i0, type: IconService, deps: [], target: i0.ɵɵFactoryTarget.Injectable });
