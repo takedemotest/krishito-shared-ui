@@ -1,0 +1,24 @@
+{
+  "name": "krishito-ui-card",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^22.0.0",
+    "@angular/core": "^22.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false,
+  "module": "fesm2022/krishito-ui-card.mjs",
+  "typings": "types/krishito-ui-card.d.ts",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./types/krishito-ui-card.d.ts",
+      "default": "./fesm2022/krishito-ui-card.mjs"
+    }
+  },
+  "type": "module"
+}

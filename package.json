@@ -15,9 +15,10 @@
     "@angular/compiler": "^22.0.0",
     "@angular/core": "^22.0.0",
     "@angular/forms": "^22.0.0",
-    "@angular/platform-browser": "^22.0.0",
     "@angular/material": "^21.2.14",
+    "@angular/platform-browser": "^22.0.0",
     "@angular/router": "^22.0.0",
+    "@takedemotest/krishito-ui-icons": "^1.0.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
   },

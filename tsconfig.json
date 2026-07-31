@@ -12,6 +12,7 @@
     "experimentalDecorators": true,
     "importHelpers": true,
     "paths": {
+      "krishito-ui-card": ["./dist/krishito-ui-card"],
       "krishito-ui-icons": ["./dist/krishito-ui-icons"],
       "shared-ui": ["./dist/shared-ui"]
     },
@@ -36,6 +37,12 @@
     },
     {
       "path": "./projects/krishito-ui-icons/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/krishito-ui-card/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/krishito-ui-card/tsconfig.spec.json"
     }
   ]
 }
