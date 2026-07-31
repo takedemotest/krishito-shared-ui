@@ -53,4 +53,4 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "22.0.8", ngImpor
  */
 
 export { CardsComponent };
-//# sourceMappingURL=krishito-ui-card.mjs.map
+//# sourceMappingURL=takedemotest-krishito-ui-card.mjs.map

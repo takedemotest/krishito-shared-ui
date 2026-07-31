@@ -1,4 +1,4 @@
-import * as krishito_ui_card from 'krishito-ui-card';
+import * as _takedemotest_krishito_ui_card from '@takedemotest/krishito-ui-card';
 import * as _angular_core from '@angular/core';
 import { TemplateRef } from '@angular/core';
 import { IconService } from '@takedemotest/krishito-ui-icons';
@@ -56,7 +56,7 @@ declare class CardsComponent {
         hasBodyContent?: _angular_core.TemplateRef<any>;
         body?: string;
         showFooter?: boolean;
-        footerActions?: krishito_ui_card.CardFooterAction[];
+        footerActions?: _takedemotest_krishito_ui_card.CardFooterAction[];
         icon?: string;
         cssClass?: string;
     }[]>;
