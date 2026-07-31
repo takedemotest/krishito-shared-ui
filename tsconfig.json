@@ -26,12 +26,7 @@
   },
   "files": [],
   "references": [
-    {
-      "path": "./projects/shared-ui/tsconfig.lib.json"
-    },
-    {
-      "path": "./projects/shared-ui/tsconfig.spec.json"
-    },
+
     {
       "path": "./projects/krishito-ui-icons/tsconfig.lib.json"
     },
