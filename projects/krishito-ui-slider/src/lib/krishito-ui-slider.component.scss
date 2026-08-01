@@ -1,0 +1,33 @@
+.slider-drawer{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0px;
+    background: rgba(0, 0, 0, .64);
+    z-index: 1;
+    display: flex;
+    &.left{
+        justify-content: flex-start;
+    }
+    &.right{
+        justify-content: flex-end;
+    }
+    &_content{
+        background: var(--main-bg-color);
+       
+    }
+    &_header{
+           display: flex;
+           justify-content: space-between;
+            padding:15px;
+            align-items: center;
+            border-bottom:1px solid #e0e0e0;
+            h5{
+                margin-bottom:0px;
+            }
+        }
+    &_body{
+        height: calc(100vh - 100px);
+        overflow:auto;
+    }
+}

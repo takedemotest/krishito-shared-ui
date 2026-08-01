@@ -1,0 +1,14 @@
+<div class="slider-drawer" *ngIf="isOpen" (click)="toggleSliderDrawer()" [ngClass]="position">
+  <div class="slider-drawer_content" 
+    [style.width]="position === 'left' || position === 'right' ? width : '100%'"
+    [style.height]="position === 'top' || position === 'bottom' ? width : '100%'"   
+    (click)="$event.stopPropagation()">
+    <div class="slider-drawer_header">
+         <h5>{{ title }}</h5>
+         <button class="ui-close-x" (click)="toggleSliderDrawer()">✕</button>
+    </div>
+    <div class="slider-drawer_body">
+         <ng-content></ng-content>
+    </div>
+  </div>
+</div>

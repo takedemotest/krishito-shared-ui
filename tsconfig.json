@@ -15,6 +15,7 @@
       "krishito-ui-card": ["./dist/krishito-ui-card"],
       "krishito-ui-form": ["./dist/krishito-ui-form"],
       "krishito-ui-icons": ["./dist/krishito-ui-icons"],
+      "krishito-ui-slider": ["./dist/krishito-ui-slider"],
       "shared-ui": ["./dist/shared-ui"]
     },
     "target": "ES2022",
@@ -44,6 +45,12 @@
     },
     {
       "path": "./projects/krishito-ui-form/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/krishito-ui-slider/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/krishito-ui-slider/tsconfig.spec.json"
     }
   ]
 }
