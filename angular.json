@@ -135,6 +135,32 @@
           }
         }
       }
+    },
+    "krishito-ui-graph": {
+      "projectType": "library",
+      "root": "projects/krishito-ui-graph",
+      "sourceRoot": "projects/krishito-ui-graph/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:ng-packagr",
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/krishito-ui-graph/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/krishito-ui-graph/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular/build:unit-test",
+          "options": {
+            "tsConfig": "projects/krishito-ui-graph/tsconfig.spec.json"
+          }
+        }
+      }
     }
   }
 }

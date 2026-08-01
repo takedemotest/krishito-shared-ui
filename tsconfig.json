@@ -14,6 +14,7 @@
     "paths": {
       "krishito-ui-card": ["./dist/krishito-ui-card"],
       "krishito-ui-form": ["./dist/krishito-ui-form"],
+      "krishito-ui-graph": ["./dist/krishito-ui-graph"],
       "krishito-ui-icons": ["./dist/krishito-ui-icons"],
       "krishito-ui-slider": ["./dist/krishito-ui-slider"],
       "shared-ui": ["./dist/shared-ui"]
@@ -51,6 +52,12 @@
     },
     {
       "path": "./projects/krishito-ui-slider/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/krishito-ui-graph/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/krishito-ui-graph/tsconfig.spec.json"
     }
   ]
 }
