@@ -1,0 +1,27 @@
+<nav>
+  <ul class="nav flex-column">
+
+    @for(cat of menuData(); track cat.categoryName){
+    @if(cat.categoryName){
+    <div class="menu-category">{{cat.categoryName}}</div>
+    }
+    @for(item of cat.items; track item.route){
+    <li class="nav-item">
+     
+      @if(item.action){
+        <a class="nav-link"
+        (click)="onItemClick(item)"
+        [routerLink]="item.route"
+        routerLinkActive="active-link"
+        ><mat-icon svgIcon="{{item.icon}}"></mat-icon>{{item.label}}</a>
+      }@else {
+        <a class="nav-link"
+        [routerLink]="item.route"
+        routerLinkActive="active-link"
+        ><mat-icon svgIcon="{{item.icon}}"></mat-icon>{{item.label}}</a>
+      }
+    </li>
+    }
+    }
+  </ul>
+</nav>

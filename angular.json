@@ -161,6 +161,32 @@
           }
         }
       }
+    },
+    "krishito-ui-navigation": {
+      "projectType": "library",
+      "root": "projects/krishito-ui-navigation",
+      "sourceRoot": "projects/krishito-ui-navigation/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:ng-packagr",
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/krishito-ui-navigation/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/krishito-ui-navigation/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular/build:unit-test",
+          "options": {
+            "tsConfig": "projects/krishito-ui-navigation/tsconfig.spec.json"
+          }
+        }
+      }
     }
   }
 }

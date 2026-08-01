@@ -1,16 +1,14 @@
 {
-  "name": "@takedemotest/krishito-ui-graph",
-  "version": "0.0.3",
+  "name": "@takedemotest/krishito-ui-navigation",
+  "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^22.1.0",
-    "@angular/core": "^22.1.0",
-    "chart.js": "^4.5.1",
-    "ng2-charts": "^10.0.0"
+    "@angular/core": "^22.1.0"
   },
   "dependencies": {
     "tslib": "^2.3.0"
   },
-  "sideEffects": false,
+   "sideEffects": false,
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
