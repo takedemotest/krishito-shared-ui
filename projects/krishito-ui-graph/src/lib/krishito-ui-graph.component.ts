@@ -10,15 +10,15 @@ import { BaseChartDirective } from 'ng2-charts';
   styleUrl: './krishito-ui-graph.component.scss',
   standalone: true
 })
-export class ChartComponent {
-  @Input() chartData: ChartData | null = null;;
-  @Input() chartType: ChartType = 'line';
-  @Input() chartOptions: ChartConfiguration['options']={
+export class GraphComponent {
+  @Input() GraphData: ChartData | null = null;;
+  @Input() GraphType: ChartType = 'line';
+  @Input() GraphOptions: ChartConfiguration['options']={
         responsive:true
   }
 
   constructor() {
-    console.log("ChartComponent initialized!");
+    console.log("GraphComponent initialized!");
   }
 
 }

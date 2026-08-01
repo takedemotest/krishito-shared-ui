@@ -1,13 +1,13 @@
 import { ChartData, ChartType, ChartConfiguration } from 'chart.js';
 import * as i0 from '@angular/core';
 
-declare class ChartComponent {
-    chartData: ChartData | null;
-    chartType: ChartType;
-    chartOptions: ChartConfiguration['options'];
+declare class GraphComponent {
+    GraphData: ChartData | null;
+    GraphType: ChartType;
+    GraphOptions: ChartConfiguration['options'];
     constructor();
-    static ɵfac: i0.ɵɵFactoryDeclaration<ChartComponent, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<ChartComponent, "graph", never, { "chartData": { "alias": "chartData"; "required": false; }; "chartType": { "alias": "chartType"; "required": false; }; "chartOptions": { "alias": "chartOptions"; "required": false; }; }, {}, never, never, true, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<GraphComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<GraphComponent, "graph", never, { "GraphData": { "alias": "GraphData"; "required": false; }; "GraphType": { "alias": "GraphType"; "required": false; }; "GraphOptions": { "alias": "GraphOptions"; "required": false; }; }, {}, never, never, true, never>;
 }
 
-export { ChartComponent };
+export { GraphComponent };
