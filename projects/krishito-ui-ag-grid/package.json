@@ -1,10 +1,10 @@
 {
   "name": "@takedemotest/krishito-ui-ag-grid",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "peerDependencies": {
     "@angular/common": "^22.1.0",
     "@angular/core": "^22.1.0",
-      "ag-grid-angular": "^36.0.2",
+    "ag-grid-angular": "^36.0.2",
     "ag-grid-community": "^36.0.2"
   },
   "dependencies": {

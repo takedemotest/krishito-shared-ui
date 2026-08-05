@@ -62,7 +62,7 @@ declare class AgGridUi {
     defaultColDef: ColDef;
     columnDefs: _angular_core.Signal<ColDef<any, any>[]>;
     static ɵfac: _angular_core.ɵɵFactoryDeclaration<AgGridUi, never>;
-    static ɵcmp: _angular_core.ɵɵComponentDeclaration<AgGridUi, "agGrid-ui  ", never, { "config": { "alias": "config"; "required": true; "isSignal": true; }; "fetchService": { "alias": "fetchService"; "required": false; "isSignal": true; }; "staticData": { "alias": "staticData"; "required": false; "isSignal": true; }; }, { "actionTriggered": "actionTriggered"; }, never, never, true, never>;
+    static ɵcmp: _angular_core.ɵɵComponentDeclaration<AgGridUi, "agGrid-ui", never, { "config": { "alias": "config"; "required": true; "isSignal": true; }; "fetchService": { "alias": "fetchService"; "required": false; "isSignal": true; }; "staticData": { "alias": "staticData"; "required": false; "isSignal": true; }; }, { "actionTriggered": "actionTriggered"; }, never, never, true, never>;
 }
 
 export { AgGridUi };

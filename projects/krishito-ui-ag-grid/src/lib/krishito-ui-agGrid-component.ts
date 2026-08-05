@@ -4,7 +4,7 @@ import { ColDef, GridApi, GridReadyEvent } from 'ag-grid-community';
 import { DataFetcherFn, gridConfig } from './krishito-ui-agGrid-model';
 
 @Component({
-  selector: 'agGrid-ui  ',
+  selector: 'agGrid-ui',
   standalone: true,
   imports: [AgGridAngular],
   templateUrl: './krishito-ui-agGrid-component.html',
