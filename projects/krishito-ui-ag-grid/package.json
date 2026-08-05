@@ -1,0 +1,21 @@
+{
+  "name": "@takedemotest/krishito-ui-ag-grid",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^22.1.0",
+    "@angular/core": "^22.1.0",
+      "ag-grid-angular": "^36.0.2",
+    "ag-grid-community": "^36.0.2"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false,
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/takedemotest/krishito-shared-ui.git"
+  }
+}

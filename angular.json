@@ -187,6 +187,32 @@
           }
         }
       }
+    },
+    "krishito-ui-agGrid": {
+      "projectType": "library",
+      "root": "projects/krishito-ui-ag-grid",
+      "sourceRoot": "projects/krishito-ui-ag-grid/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:ng-packagr",
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/krishito-ui-ag-grid/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/krishito-ui-ag-grid/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular/build:unit-test",
+          "options": {
+            "tsConfig": "projects/krishito-ui-ag-grid/tsconfig.spec.json"
+          }
+        }
+      }
     }
   }
 }

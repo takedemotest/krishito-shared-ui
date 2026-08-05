@@ -12,6 +12,7 @@
     "experimentalDecorators": true,
     "importHelpers": true,
     "paths": {
+      "krishito-ui-agGrid": ["./dist/krishito-ui-ag-grid"],
       "krishito-ui-card": ["./dist/krishito-ui-card"],
       "krishito-ui-form": ["./dist/krishito-ui-form"],
       "krishito-ui-graph": ["./dist/krishito-ui-graph"],
@@ -65,6 +66,12 @@
     },
     {
       "path": "./projects/krishito-ui-navigation/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/krishito-ui-ag-grid/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/krishito-ui-ag-grid/tsconfig.spec.json"
     }
   ]
 }

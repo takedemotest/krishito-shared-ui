@@ -1,9 +1,11 @@
 {
-  "name": "@takedemotest/krishito-ui-navigation",
+  "name": "@takedemotest/krishito-ui-ag-grid",
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^22.1.0",
-    "@angular/core": "^22.1.0"
+    "@angular/core": "^22.1.0",
+    "ag-grid-angular": "^36.0.2",
+    "ag-grid-community": "^36.0.2"
   },
   "dependencies": {
     "tslib": "^2.3.0"
@@ -16,15 +18,15 @@
     "type": "git",
     "url": "https://github.com/takedemotest/krishito-shared-ui.git"
   },
-  "module": "fesm2022/takedemotest-krishito-ui-navigation.mjs",
-  "typings": "types/takedemotest-krishito-ui-navigation.d.ts",
+  "module": "fesm2022/takedemotest-krishito-ui-ag-grid.mjs",
+  "typings": "types/takedemotest-krishito-ui-ag-grid.d.ts",
   "exports": {
     "./package.json": {
       "default": "./package.json"
     },
     ".": {
-      "types": "./types/takedemotest-krishito-ui-navigation.d.ts",
-      "default": "./fesm2022/takedemotest-krishito-ui-navigation.mjs"
+      "types": "./types/takedemotest-krishito-ui-ag-grid.d.ts",
+      "default": "./fesm2022/takedemotest-krishito-ui-ag-grid.mjs"
     }
   },
   "type": "module"
