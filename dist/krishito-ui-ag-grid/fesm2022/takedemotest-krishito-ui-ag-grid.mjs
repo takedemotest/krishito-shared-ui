@@ -1,7 +1,17 @@
 import * as i0 from '@angular/core';
 import { input, output, effect, signal, computed, Component } from '@angular/core';
 import { AgGridAngular } from 'ag-grid-angular';
+import { ModuleRegistry, TextFilterModule, NumberFilterModule, BigIntFilterModule, DateFilterModule, CustomFilterModule, ValidationModule, PaginationModule } from 'ag-grid-community';
 
+ModuleRegistry.registerModules([
+    TextFilterModule,
+    NumberFilterModule,
+    BigIntFilterModule,
+    DateFilterModule,
+    CustomFilterModule,
+    ValidationModule,
+    PaginationModule
+]);
 class AgGridUi {
     config = input.required(/* @ts-ignore */
     ...(ngDevMode ? [{ debugName: "config" }] : /* istanbul ignore next */ []));
@@ -37,7 +47,7 @@ class AgGridUi {
             error: (err) => {
                 this.errorMessage.set(err?.error?.message || 'Failed to load grid data.');
                 this.isLoading.set(false);
-            }
+            },
         });
     }
     onQuickFilterChanged(event) {

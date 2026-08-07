@@ -1,6 +1,6 @@
 import * as _angular_core from '@angular/core';
-import { GridReadyEvent, ColDef } from 'ag-grid-community';
 import { Observable } from 'rxjs';
+import { GridReadyEvent, ColDef } from 'ag-grid-community';
 
 type columnType = 'text' | 'number' | 'date' | 'boolean' | 'custom' | 'currency' | 'percentage' | 'email' | 'url' | 'image' | 'icon' | 'button' | 'select' | 'multi-select' | 'radio' | 'checkbox' | 'color' | 'progress-bar' | 'rating' | 'tag' | 'badge' | 'avatar' | 'tooltip' | 'link' | 'actions' | 'nested' | 'tree' | 'group' | 'pivot' | 'sparkline' | 'heatmap' | 'calendar' | 'timeline' | 'gauge' | 'chart' | 'map' | 'custom-component';
 interface columnDefs {
