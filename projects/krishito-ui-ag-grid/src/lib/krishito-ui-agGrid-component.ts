@@ -1,7 +1,30 @@
 import { Component, computed, effect, input, output, signal } from '@angular/core';
 import { AgGridAngular } from 'ag-grid-angular';
-import { ColDef, GridApi, GridReadyEvent } from 'ag-grid-community';
 import { DataFetcherFn, gridConfig } from './krishito-ui-agGrid-model';
+
+import {
+  ColDef, 
+  GridApi,
+  GridReadyEvent,
+  ModuleRegistry,
+  TextFilterModule,
+  NumberFilterModule,
+  BigIntFilterModule,
+  DateFilterModule,
+  CustomFilterModule,
+  ValidationModule,
+  PaginationModule
+} from 'ag-grid-community';
+
+ModuleRegistry.registerModules([
+  TextFilterModule,
+  NumberFilterModule,
+  BigIntFilterModule,
+  DateFilterModule,
+  CustomFilterModule,
+  ValidationModule,
+  PaginationModule
+]);
 
 @Component({
   selector: 'agGrid-ui',
@@ -47,7 +70,7 @@ export class AgGridUi {
       error: (err) => {
         this.errorMessage.set(err?.error?.message || 'Failed to load grid data.');
         this.isLoading.set(false);
-      }
+      },
     });
   }
 
