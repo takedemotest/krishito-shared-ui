@@ -1,9 +1,9 @@
-import { Component, computed, effect, input, output, signal } from '@angular/core';
+import { Component, computed, effect, inject, input, output, signal } from '@angular/core';
 import { AgGridAngular } from 'ag-grid-angular';
-import { DataFetcherFn, gridConfig } from './krishito-ui-agGrid-model';
+import { DataFetcherFn, GridActionPayload, gridConfig } from './krishito-ui-agGrid-model';
 
 import {
-  ColDef, 
+  ColDef,
   GridApi,
   GridReadyEvent,
   ModuleRegistry,
@@ -13,8 +13,11 @@ import {
   DateFilterModule,
   CustomFilterModule,
   ValidationModule,
-  PaginationModule
+  PaginationModule,
+  RowSelectionModule,
+  ClientSideRowModelModule
 } from 'ag-grid-community';
+import { MatIconModule } from '@angular/material/icon';
 
 ModuleRegistry.registerModules([
   TextFilterModule,
@@ -23,17 +26,19 @@ ModuleRegistry.registerModules([
   DateFilterModule,
   CustomFilterModule,
   ValidationModule,
-  PaginationModule
+  PaginationModule,
+  RowSelectionModule,
+  ClientSideRowModelModule
 ]);
 
 @Component({
   selector: 'agGrid-ui',
   standalone: true,
-  imports: [AgGridAngular],
+  imports: [AgGridAngular, MatIconModule],
   templateUrl: './krishito-ui-agGrid-component.html',
   styleUrl: './krishito-ui-agGrid-component.scss',
 })
-export class AgGridUi {
+export class AgGridUiComponent {
   config = input.required<gridConfig>();
   fetchService = input<DataFetcherFn>();
   staticData = input<any[]>();
@@ -78,9 +83,6 @@ export class AgGridUi {
     this.gridApi?.setGridOption('quickFilterText', event.target.value);
   }
 
-  exportCsv(): void {
-    this.gridApi?.exportDataAsCsv({ fileName: `${this.config().gridId || 'export'}.csv` });
-  }
 
   onGridReady(params: GridReadyEvent): void {
     this.gridApi = params.api;
@@ -158,4 +160,7 @@ export class AgGridUi {
       return colDef;
     });
   });
+  handleAction(payload: GridActionPayload): void {
+    this.actionTriggered.emit({ actionName: payload.actionName, rowData: payload.rowData });
+  }
 }

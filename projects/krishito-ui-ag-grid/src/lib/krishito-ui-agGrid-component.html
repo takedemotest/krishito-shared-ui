@@ -1,44 +1,39 @@
-<div class="generic-grid-wrapper">
-  
-  <!-- HEADER & TOOLBAR -->
+<div class="grid-ui-wrapper">
   <div class="grid-header">
     @if (config().title) {
-      <h3 class="grid-title">{{ config().title }}</h3>
+    <h3 class="grid-title">{{ config().title }}</h3>
     }
-    
     <div class="grid-controls">
       @if (config().enableSearch ?? true) {
-        <input 
-          type="text" 
-          placeholder="🔍 Search all records..." 
-          (input)="onQuickFilterChanged($event)"
-          class="search-input" />
+      <div class="search-bar">
+        <div class="icon-wrapper"> 
+          <mat-icon [svgIcon]="'warning'"></mat-icon>
+        </div>
+        <input type="text" placeholder="Search" (input)="onQuickFilterChanged($event)" class="search-input" />
+      </div>
       }
-
-      @if (config().enableExport ?? true) {
-        <button (click)="exportCsv()" class="btn-export">📥 Export CSV</button>
+      @if (config().actionButtons) {
+      <div class="action-button-container">
+        @for(action of config().actionButtons; track action.actionName) {
+        <a class="action-button" (click)="handleAction({ actionName: action.actionName, rowData: null })">
+          <mat-icon [svgIcon]="action.icon"></mat-icon>
+          {{ action.label }}
+        </a>
+        }
+      </div>
       }
-
-      <button (click)="loadData()" class="btn-refresh">🔄 Refresh</button>
     </div>
   </div>
 
-  <!-- LOADING / ERROR STATES -->
   @if (isLoading()) {
-    <div class="grid-status loading">Loading data from service...</div>
+  <div class="grid-status loading">Loading data from service...</div>
   } @else if (errorMessage()) {
-    <div class="grid-status error">{{ errorMessage() }}</div>
+  <div class="grid-status error">{{ errorMessage() }}</div>
   }
 
-  <!-- AG GRID COMPONENT -->
-  <ag-grid-angular
-    style="width: 100%; height: 480px;"
-    class="ag-theme-alpine"
-    [rowData]="rowData()"
-    [columnDefs]="columnDefs()"
-    [defaultColDef]="defaultColDef"
-    [pagination]="config().pagination ?? true"
-    [paginationPageSize]="config().pageSize ?? 10"
+  <ag-grid-angular class="ag-theme-alpine" [rowData]="rowData()" [columnDefs]="columnDefs()"
+    [defaultColDef]="defaultColDef" [rowSelection]="config().rowSelection || 'multiple'"
+    [pagination]="config().pagination ?? true" [paginationPageSize]="config().pageSize ?? 10"
     (gridReady)="onGridReady($event)">
   </ag-grid-angular>
 </div>
